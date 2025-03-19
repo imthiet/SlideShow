@@ -1,8 +1,8 @@
 {
     "songs": [
-      "http://127.0.0.1:5500/music/m2.mp3",
-      "http://127.0.0.1:5500/music/m1.mp3",
-      "http://127.0.0.1:5500/music/m3.mp3"
+      "music/m2.mp3",
+      "music/m1.mp3",
+      "music/m3.mp3"
     ]
   }
   
