@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture saver</title>
+    <link rel="stylesheet" href="style.css">
+    
+      
+
+</head>
+<body>
+   <!-- Thêm phần phát nhạc -->
+<audio id="backgroundMusic" loop>
+    Your browser does not support the audio element.
+</audio>
+    
+
+    <h1>SlideShow</h1>
+
+    <!-- Tải ảnh lên -->
+    <input type="file" id="uploadImages" multiple>
+    <button onclick="uploadImages()">Tải ảnh lên</button>
+
+    <!-- Chọn thời gian tìm kiếm -->
+    <label>Từ:</label>
+    <input type="month" id="startDate">
+    <label>Đến:</label>
+    <input type="month" id="endDate">
+    <button onclick="generateMemories()">Tìm kiếm</button>
+
+    <!-- Hiển thị ảnh -->
+    <div id="preview"></div>
+
+    <!-- Chọn nhạc nền -->
+    <label>Chọn nhạc:</label>
+    <select id="music">
+        <option value="music/music1.mp3">memories</option>
+        <option value="music/music2.mp3">let her go</option>
+        <option value="music/music3.mp3">past live</option>
+    </select>
+
+   
+
+   
+    <script src="script.js"></script>
+</body>
+</html>

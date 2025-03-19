@@ -1,0 +1,113 @@
+/* Cài đặt chung */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #87ead8, #97a6e8);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input và button */
+input, select, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="month"] {
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    background-color: #ff7eb3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff5274;
+}
+
+/* Khu vực chọn nhạc */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+select {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Hiển thị ảnh */
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#preview img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 3s, transform 0.8s;
+}
+
+
+
+/* Phần phát nhạc */
+#audio-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#audio-container audio {
+    width: 250px;
+}
+#preview img.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Ảnh phóng to trong slideshow */
+#preview img.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 1;
+    z-index: 10;
+    transition: transform 2.5s ease-in-out, opacity 5s ease-in-out;
+}
+
+#preview img.hiding {
+    transform: translate(-50%, -50%) scale(1); /* Thu nhỏ từ từ */
+    opacity: 0; /* Mờ dần */
+    transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+}
