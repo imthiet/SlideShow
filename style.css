@@ -100,8 +100,7 @@ label {
     transform: translate(-50%, -50%) scale(4);
     opacity: 1;
     z-index: 10;
-    max-width: 95vw;
-    max-height: 80vh;
+   
     transition: transform 2.5s ease-in-out, opacity 5s ease-in-out;
 }
 
