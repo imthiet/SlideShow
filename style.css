@@ -143,3 +143,21 @@ select {
 #stopSlideshow:hover {
     background-color: #cc0000;
 }
+
+
+#music_on
+{
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    padding: 12px 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 9999; /* Đảm bảo luôn hiển thị trên cùng */
+}
