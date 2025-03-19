@@ -26,6 +26,10 @@ async function uploadImages() {
 
   alert("Tải ảnh thành công!");
 }
+document.getElementById("playMusic").addEventListener("click", function () {
+  let audio = document.getElementById("backgroundMusic");
+  audio.play().catch((error) => console.log("Lỗi phát nhạc:", error));
+});
 
 // 2. Tìm kiếm ảnh theo khoảng thời gian và tạo slideshow
 async function generateMemories() {
