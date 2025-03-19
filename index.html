@@ -17,28 +17,32 @@
     
 
     <h1>SlideShow</h1>
+    <div id="slideshow-overlay"></div>
+    <button id="stopSlideshow" onclick="stopSlideshow()">Stop Show</button>
+
 
     <!-- Tải ảnh lên -->
-    <input type="file" id="uploadImages" multiple>
-    <button onclick="uploadImages()">Tải ảnh lên</button>
-
+    <!-- <input type="file" id="uploadImages" multiple>
+    <button onclick="uploadImages()">Tải ảnh lên</button> -->
+    <h2>Chọn Khoảng thời gian ảnh ( theo mess 10x)</h2>
     <!-- Chọn thời gian tìm kiếm -->
     <label>Từ:</label>
     <input type="month" id="startDate">
     <label>Đến:</label>
     <input type="month" id="endDate">
     <button onclick="generateMemories()">Tìm kiếm</button>
+     <!-- Chọn nhạc nền -->
+     <label>Chọn nhạc:</label>
+     <select id="music">
+         <option value="music/music1.mp3">memories</option>
+         <option value="music/music2.mp3">let her go</option>
+         <option value="music/music3.mp3">past live</option>
+     </select>
 
     <!-- Hiển thị ảnh -->
     <div id="preview"></div>
 
-    <!-- Chọn nhạc nền -->
-    <label>Chọn nhạc:</label>
-    <select id="music">
-        <option value="music/music1.mp3">memories</option>
-        <option value="music/music2.mp3">let her go</option>
-        <option value="music/music3.mp3">past live</option>
-    </select>
+   
 
    
 

@@ -1,27 +1,18 @@
 import os
-import requests
 
-# Tạo thư mục lưu ảnh
-save_folder = "messenger_images"
-os.makedirs(save_folder, exist_ok=True)
+folder_path = "D:\From C\Downloads\Imgae_Mess"  # Đường dẫn đến thư mục ảnh
 
-# Đọc danh sách ảnh và timestamp
-with open("images_with_time.txt", "r", encoding="utf-8") as file:
-    lines = file.readlines()
+# Lấy danh sách file ảnh
+files = [f for f in os.listdir(folder_path) if f.endswith(('.jpg', '.png', '.jpeg'))]
 
-for i, line in enumerate(lines):
-    try:
-        timestamp, url = line.strip().split(" - ")
-        filename = f"{save_folder}/{timestamp.replace(':', '-').replace(' ', '_')}.jpg"  # Định dạng lại tên file
-        
-        response = requests.get(url)
-        if response.status_code == 200:
-            with open(filename, "wb") as file:
-                file.write(response.content)
-        
-        print(f"Đã tải {i+1}/{len(lines)}: {filename}")
+# Duyệt qua từng file và đổi tên
+for index, file in enumerate(files, start=1):
+    ext = file.split(".")[-1]  # Lấy đuôi file (jpg, png, ...)
+    new_name = f"odd_mg_{index}.{ext}"  # Đặt tên mới (image_1.jpg, image_2.jpg,...)
+    old_path = os.path.join(folder_path, file)
+    new_path = os.path.join(folder_path, new_name)
+    
+    os.rename(old_path, new_path)
+    print(f"Đã đổi: {file} → {new_name}")
 
-    except Exception as e:
-        print(f"Lỗi tải ảnh {i+1}: {e}")
-
-print("Tải ảnh hoàn tất!")
+print("✅ Hoàn thành!")
